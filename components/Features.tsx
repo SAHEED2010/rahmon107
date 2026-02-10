@@ -9,22 +9,17 @@ const features = [
   {
     title: 'Earn Badges & Climb the Leaderboard',
     description: 'Get rewarded for every order you make. Unlock badges, track your progress, and compete with friends as you enjoy fast, reliable deliveries.',
-    icon: '🏆'
+    image: '/talking_files/App-Screen-011.webp'
   },
   {
     title: 'Refer Friends & Earn Rewards',
     description: 'Share your unique referral code and get instant bonuses when your friends sign up and place their first order. More invites = more rewards.',
-    icon: '🤝'
+    image: '/talking_files/App-Screen-02.webp'
   },
   {
     title: 'Track Your Orders in Real Time',
     description: 'Know exactly where your rider is at every moment. From pickup to drop-off, SuddenGo gives you live delivery updates so you stay informed.',
-    icon: '📍'
-  },
-  {
-    title: 'Access Quick Micro-Loans Instantly',
-    description: 'Unlock flexible micro-loans based on your app activity and referrals. Build your score as you order, earn badges, and climb the leaderboard',
-    icon: '🏦'
+    image: '/talking_files/App-Screen-03.webp'
   }
 ];
 
@@ -85,20 +80,13 @@ export const Features = () => {
                   {feature.description}
                 </p>
                 
-                <div className="mt-auto relative z-10 px-4">
-                    {/* Mock iPhone App Screen */}
-                    <div className="w-full aspect-[9/16] bg-white rounded-t-[2.5rem] shadow-2xl overflow-hidden border-x-[6px] border-t-[6px] border-[#333]">
-                        <div className="h-full w-full p-4 flex flex-col">
-                            <div className="flex justify-between items-center mb-6">
-                                <div className="text-black/40 text-[10px] font-bold">10:55</div>
-                                <div className="w-12 h-4 bg-black rounded-full" />
-                                <div className="text-black/40 text-[10px]">🔋</div>
-                            </div>
-                            <div className="text-black font-black text-sm mb-4">{feature.title.split(' & ')[0]}</div>
-                            <div className="flex-1 bg-gray-50 rounded-2xl flex items-center justify-center text-5xl cursor-pointer hover:rotate-6 transition-transform">
-                                {feature.icon}
-                            </div>
-                        </div>
+                <div className="mt-auto relative z-10">
+                    <div className="w-full flex justify-center">
+                        <img 
+                          src={feature.image} 
+                          alt={feature.title} 
+                          className="w-auto h-[450px] object-contain drop-shadow-2xl"
+                        />
                     </div>
                 </div>
                 
