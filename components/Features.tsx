@@ -34,13 +34,16 @@ export const Features = () => {
   return (
     <section className="py-24 bg-[#8b0000] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <h2 
+          data-aos="fade-up"
+          className="text-4xl md:text-6xl font-black text-white mb-16 leading-tight text-center"
+        >
+          Powerful Features for <br /> Your Daily Lifestyle
+        </h2>
         <div 
           data-aos="fade-up"
           className="flex flex-col md:flex-row justify-between items-start gap-12"
         >
-          <h2 className="text-3xl md:text-5xl font-black max-w-md leading-tight">
-            Explore Powerful Features Built for Your Daily Convenience
-          </h2>
           <p className="text-xl text-white/80 max-w-xl font-medium leading-relaxed">
             SuddenGo is more than delivery — it's a complete lifestyle and financial super-app. Enjoy real-time tracking, secure payments, referral rewards, and access to in-app micro-loans designed for everyday convenience.
           </p>

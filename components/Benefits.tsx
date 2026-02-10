@@ -34,11 +34,11 @@ export const Benefits = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="py-24 bg-[#fff8f0] overflow-hidden">
+    <section className="py-24 bg-[var(--background)] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 
           data-aos="fade-up"
-          className="text-4xl md:text-6xl font-black text-[#3a130d] mb-16 leading-tight text-center"
+          className="text-4xl md:text-6xl font-black text-[var(--foreground)] mb-16 leading-tight text-center"
         >
           Why People Love <br /> Using SuddenGo
         </h2>
