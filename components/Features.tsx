@@ -9,17 +9,27 @@ const features = [
   {
     title: 'Earn Badges & Climb the Leaderboard',
     description: 'Get rewarded for every order you make. Unlock badges, track your progress, and compete with friends as you enjoy fast, reliable deliveries.',
-    image: '/talking_files/App-Screen-011.webp'
+    image: '/assets/App-Screen-011.webp'
   },
   {
     title: 'Refer Friends & Earn Rewards',
     description: 'Share your unique referral code and get instant bonuses when your friends sign up and place their first order. More invites = more rewards.',
-    image: '/talking_files/App-Screen-02.webp'
+    image: '/assets/App-Screen-02.webp'
   },
   {
     title: 'Track Your Orders in Real Time',
     description: 'Know exactly where your rider is at every moment. From pickup to drop-off, SuddenGo gives you live delivery updates so you stay informed.',
-    image: '/talking_files/App-Screen-03.webp'
+    image: '/assets/App-Screen-03.webp'
+  },
+  {
+    title: 'Access Quick Micro-Loans Instantly',
+    description: 'Unlock flexible micro-loans based on your app activity and referrals. Build your score as you order, earn badges, and climb the leaderboard.',
+    image: '/assets/Loan.webp'
+  },
+  {
+    title: 'Order Tracking & Live Updates',
+    description: 'Track your deliveries in real-time with our advanced GPS tracking system. Know exactly when your food or grocery will arrive at your doorstep.',
+    image: '/assets/sudden-hero-1-1-scaled.webp'
   }
 ];
 

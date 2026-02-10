@@ -32,7 +32,7 @@ export const Hero = () => {
                 {/* SuddenGo Logo - Using the actual asset */}
                 <div className="relative w-[150px] md:w-[180px] py-2">
                   <img 
-                    src="/talking_files/aSuddenGo-Logo-with-Tagline-Orange-1.webp" 
+                    src="/assets/aSuddenGo-Logo-with-Tagline-Orange-1.webp" 
                     alt="SuddenGo Logo" 
                     className="w-full h-auto object-contain brightness-0 invert" 
                   />
