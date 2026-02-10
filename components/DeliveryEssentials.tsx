@@ -41,7 +41,7 @@ export const DeliveryEssentials = () => {
             {/* Bottom Image Illustration */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 md:w-3/4 max-w-[300px]">
               <img 
-                src="/food.png" 
+                src="/smile.png" 
                 alt="Delivery illustration" 
                 className="w-full h-auto object-contain"
               />
