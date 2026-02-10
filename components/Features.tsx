@@ -82,11 +82,11 @@ export const Features = () => {
         >
           {features.map((feature, i) => (
             <SwiperSlide key={i}>
-              <div className="bg-[#ff6b00] rounded-[3rem] p-10 flex flex-col relative overflow-hidden group h-[600px] shadow-2xl">
-                <h3 className="text-3xl font-black mb-6 leading-tight relative z-10">
+              <div className="bg-[#ff6b00] rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 flex flex-col relative overflow-hidden group h-[500px] sm:h-[600px] shadow-2xl">
+                <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6 leading-tight relative z-10">
                   {feature.title}
                 </h3>
-                <p className="text-white/90 text-lg font-medium leading-relaxed mb-8 relative z-10">
+                <p className="text-white/90 text-base sm:text-lg font-medium leading-relaxed mb-6 sm:mb-8 relative z-10">
                   {feature.description}
                 </p>
                 
@@ -95,7 +95,7 @@ export const Features = () => {
                         <img 
                           src={feature.image} 
                           alt={feature.title} 
-                          className="w-auto h-[450px] object-contain drop-shadow-2xl"
+                          className="w-auto h-[300px] sm:h-[450px] object-contain drop-shadow-2xl"
                         />
                     </div>
                 </div>
