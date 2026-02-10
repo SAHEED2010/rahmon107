@@ -2,15 +2,15 @@ import React from 'react';
 
 export const DeliveryEssentials = () => {
   return (
-    <section className="py-12 bg-[var(--background)]">
+    <section className="py-8 sm:py-12 bg-[var(--background)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left Card: Food & Essentials */}
           <div 
             data-aos="fade-right"
-            className="bg-[#440906] rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden flex flex-col min-h-[500px]"
+            className="bg-[#440906] rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 relative overflow-hidden flex flex-col min-h-[400px] sm:min-h-[500px]"
           >
-            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-8 relative z-10 max-w-sm">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight mb-6 md:mb-8 relative z-10 max-w-sm">
               Food, Groceries & Essentials Delivered the Easy Way
             </h2>
             
