@@ -1,4 +1,9 @@
-import React from 'react';
+"use client";
+
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 
 const features = [
   {
@@ -24,50 +29,100 @@ const features = [
 ];
 
 export const Features = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
-    <section className="py-24 bg-[#7a1c0e] text-white overflow-hidden">
+    <section className="py-24 bg-[#8b0000] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+        <div 
+          data-aos="fade-up"
+          className="flex flex-col md:flex-row justify-between items-start gap-12"
+        >
           <h2 className="text-3xl md:text-5xl font-black max-w-md leading-tight">
             Explore Powerful Features Built for Your Daily Convenience
           </h2>
           <p className="text-xl text-white/80 max-w-xl font-medium leading-relaxed">
-            SuddenGo is more than delivery — it’s a complete lifestyle and financial super-app. Enjoy real-time tracking, secure payments, referral rewards, and access to in-app micro-loans designed for everyday convenience.
+            SuddenGo is more than delivery — it's a complete lifestyle and financial super-app. Enjoy real-time tracking, secure payments, referral rewards, and access to in-app micro-loans designed for everyday convenience.
           </p>
         </div>
       </div>
 
-      <div className="flex gap-6 overflow-x-auto px-4 sm:px-6 lg:px-8 pb-12 scrollbar-hide snap-x">
-        {features.map((feature, i) => (
-          <div key={i} className="min-w-[320px] md:min-w-[400px] bg-[#ff4d1c] rounded-[3rem] p-10 flex flex-col snap-start relative overflow-hidden group h-[600px]">
-            <h3 className="text-3xl font-black mb-6 leading-tight relative z-10">
-              {feature.title}
-            </h3>
-            <p className="text-white/90 text-lg font-medium leading-relaxed mb-8 relative z-10">
-              {feature.description}
-            </p>
-            
-            <div className="mt-auto relative z-10 px-4">
-                {/* Mock iPhone App Screen */}
-                <div className="w-full aspect-[9/16] bg-white rounded-t-[2.5rem] shadow-2xl overflow-hidden border-x-[6px] border-t-[6px] border-[#333]">
-                    <div className="h-full w-full p-4 flex flex-col">
-                        <div className="flex justify-between items-center mb-6">
-                            <div className="text-black/40 text-[10px] font-bold">10:55</div>
-                            <div className="w-12 h-4 bg-black rounded-full" />
-                            <div className="text-black/40 text-[10px]">🔋</div>
-                        </div>
-                        <div className="text-black font-black text-sm mb-4">{feature.title.split(' & ')[0]}</div>
-                        <div className="flex-1 bg-gray-50 rounded-2xl flex items-center justify-center text-4xl">
-                            {feature.icon}
+      <div className="relative px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-delay="200">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={1}
+          navigation={{
+            prevEl: '.swiper-button-prev-features',
+            nextEl: '.swiper-button-next-features',
+          }}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          className="pb-12 max-w-7xl mx-auto"
+        >
+          {features.map((feature, i) => (
+            <SwiperSlide key={i}>
+              <div className="bg-[#ff6b00] rounded-[3rem] p-10 flex flex-col relative overflow-hidden group h-[600px] shadow-2xl">
+                <h3 className="text-3xl font-black mb-6 leading-tight relative z-10">
+                  {feature.title}
+                </h3>
+                <p className="text-white/90 text-lg font-medium leading-relaxed mb-8 relative z-10">
+                  {feature.description}
+                </p>
+                
+                <div className="mt-auto relative z-10 px-4">
+                    {/* Mock iPhone App Screen */}
+                    <div className="w-full aspect-[9/16] bg-white rounded-t-[2.5rem] shadow-2xl overflow-hidden border-x-[6px] border-t-[6px] border-[#333]">
+                        <div className="h-full w-full p-4 flex flex-col">
+                            <div className="flex justify-between items-center mb-6">
+                                <div className="text-black/40 text-[10px] font-bold">10:55</div>
+                                <div className="w-12 h-4 bg-black rounded-full" />
+                                <div className="text-black/40 text-[10px]">🔋</div>
+                            </div>
+                            <div className="text-black font-black text-sm mb-4">{feature.title.split(' & ')[0]}</div>
+                            <div className="flex-1 bg-gray-50 rounded-2xl flex items-center justify-center text-5xl cursor-pointer hover:rotate-6 transition-transform">
+                                {feature.icon}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            {/* Background design */}
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
-          </div>
-        ))}
+                
+                {/* Background design */}
+                <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        
+        {/* Custom Navigation Arrows */}
+        <button 
+          className="swiper-button-prev-features absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <svg className="w-6 h-6 text-[#8b0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button 
+          className="swiper-button-next-features absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <svg className="w-6 h-6 text-[#8b0000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </section>
   );
