@@ -2,9 +2,9 @@ import React from 'react';
 
 export const AllInOne = () => {
   return (
-    <section className="py-24 bg-[var(--background)] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[4rem] p-10 md:p-24 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906]/5 shadow-2xl">
+    <section className="relative z-10 -mt-32 md:-mt-48 lg:-mt-64 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-white rounded-[2rem] md:rounded-[4rem] p-8 md:p-24 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-16 border border-[#440906]/5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]">
           <div className="lg:w-1/2" data-aos="fade-right">
              <h2 className="text-4xl md:text-5xl font-black text-[#440906] leading-[1.1] mb-6">
                 Deliveries, Groceries, Wallet & Loans — All in One App

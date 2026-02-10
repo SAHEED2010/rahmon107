@@ -21,7 +21,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen md:min-h-[85vh] pt-20 md:pt-24 pb-12 md:pb-16 overflow-hidden bg-[#fe5722]">
+    <section className="relative min-h-screen md:min-h-[85vh] pt-20 md:pt-24 pb-48 md:pb-64 lg:pb-80 overflow-hidden bg-[#fe5722]">
       {/* Navbar */}
       <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
